@@ -16,7 +16,7 @@ chmod +x RustDesk.AppImage
 ./RustDesk.AppImage
 
 # Permenant Solution
-wget -O RunMeForRustDesk.sh 
+wget -O RunMeForRustDesk.sh https://github.com/strangetheproot/practical-shell-files/blob/main/RunMeForRustDesk.sh
 
 # Gibs the choice
 read -p "Time to go back! Press y :3" choice
