@@ -53,4 +53,6 @@ zenity --info --text="Script finished! Grabbing Updater.sh"
 
 # Goodbye!
 echo "Run sudo ./Updater.sh"
+echo "With the help of my brain, my first shell script has been finished."
+echo "Made by Strange"
 exit 1
