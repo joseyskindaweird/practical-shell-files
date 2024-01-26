@@ -40,19 +40,57 @@ chmod +x RustDesk.sh
 
 # Says something to you
 zenity --info --text="Hellooooo!!! If you wanna learn more about this popup, text meeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee! (this better work)"
-echo "That popup"
+read -p "Wanna launch it? Press Y for yes, press N to continue. (Do N if you already ran it)" choice
+
+# Gib choice
+if [ "$choice" == "y" ]; then
+  echo "Launching the script"
+  ./RustDesk.sh
+else
+  echo "Okay! Continuing...."
+fi
+
+
 
 # Download an example .sh file
 wget -O Updater.sh https://raw.githubusercontent.com/strangetheproot/practical-shell-files/main/Updater.sh
 
 # Make the downloaded file executable
 chmod +x Updater.sh
+read -p "Press Y to update, or N to not if you already did." choice
+
+if [ "$choice" == "y" ]; then
+  sudo ./Updater.sh
+else
+  echo "Okay!"
+fi
 
 # Display a Zenity popup
-zenity --info --text="Script finished! Grabbing Updater.sh"
+zenity --info --text="Script finished! Run Updater.sh for now!"
+
+# Moves a file, only here if I gave you the script. You know who you are :3
+destination_directory="$HOME/oldscript/"
+source_file="RustDesk.sh"
+
+
+# Check if the source file exists
+if [ -e "$source_file" ]; then
+    # Move the file to the destination directory
+    mv "$source_file" "$destination_directory"
+    echo "File '$source_file' has been moved to '$destination_directory'."
+else
+    echo "File has already been moved, continuing.."
+fi
 
 # Goodbye!
-echo "Run sudo ./Updater.sh"
 echo "With the help of my brain, my first shell script has been finished."
-echo "Made by Strange"
-exit 1
+echo "Made by Strange."
+cd /home/Desktop/
+read -p "Would you like to reboot? Y for yes, N for no." choice
+
+
+if [ "$choice" == "y" ]; then
+  sudo reboot
+else
+  exit 1
+fi
