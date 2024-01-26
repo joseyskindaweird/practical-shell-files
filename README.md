@@ -1,2 +1,2 @@
 # practical-shell-files
-.sh files that are super helpful for automation and stuff. [arch only!]
+.sh files related to the Big main script i'm making. <3
