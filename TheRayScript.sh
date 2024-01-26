@@ -49,19 +49,8 @@ wget -O Updater.sh https://github.com/strangetheproot/practical-shell-files/blob
 chmod +x Updater.sh
 
 # Display a Zenity popup
-zenity --info --text="Script finished! Running Updater.sh"
+zenity --info --text="Script finished! Grabbing Updater.sh"
 
-# Move itself onto the next script.
-sudo ./Updater.sh
-
-# Bye!
-echo "First shell script. By Strange."
-# Gibs the choice
-read -p "Reboot? Press Y for yes, N for no." choice
-
-if [ "$choice" == "y" ]; then
-  sudo reboot
-else
-  echo "ByeBye!"
-  exit 1
-fi
+# Goodbye!
+echo "Run sudo ./Updater.sh"
+exit 1
