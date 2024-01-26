@@ -46,6 +46,7 @@ read -p "If you wanna run the script as shown above, press y. Otherwise, press N
 
 if [ "$choice" == "y" ]; then
   sudo ./RustDesk.sh
+  exit 1
 else
   echo "Alright, continuing.."
 fi
@@ -70,7 +71,7 @@ wget -O Updater.sh https://github.com/strangetheproot/practical-shell-files/blob
 chmod +x Updater.sh
 
 # Display a Zenity popup
-zenity --info --text="Script finished! Running Updater.sh <3"
+zenity --info --text="Script finished! Running Updater.sh"
 
 # Move itself onto the next script.
 sudo ./Updater.sh
