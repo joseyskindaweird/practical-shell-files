@@ -22,6 +22,7 @@ wget -O RunMeForRustDesk.sh https://github.com/strangetheproot/practical-shell-f
 read -p "Time to go back! Press y :3" choice
 
 if [ "$choice" == "y" ]; then
+  sudo ./TheRayScript.sh
   exit 1
 else
   echo "tf you doing? wrong button bro. Either way, ur going back >:3"
