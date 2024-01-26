@@ -26,5 +26,6 @@ if [ "$choice" == "y" ]; then
   exit 1
 else
   echo "tf you doing? wrong button bro. Either way, ur going back >:3"
+    sudo ./TheRayScript.sh
   exit 1
 fi
