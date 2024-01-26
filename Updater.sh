@@ -7,11 +7,11 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 # Makes a folder to store the file in
-sudo mkdir /home/oldscript/
+mkdir -p ~/oldscript
+destination_directory="$HOME/oldscript/"
 
-# Moves a file, only here if i gave you the script. You know who you is :3
+# Moves a file, only here if I gave you the script. You know who you are :3
 source_file="TheRayScript.sh"
-destination_directory="/home/oldscript/"
 
 # Check if the source file exists
 if [ -e "$source_file" ]; then
@@ -33,6 +33,7 @@ echo "Base system is up-to-date."
 
 # Update the AUR
 echo "Updating AUR..."
+# Assuming yay is installed. If not, install it using your package manager.
 yay -Syu --noconfirm
 if [ $? -ne 0 ]; then
   echo "Error: command failed. Exiting."
