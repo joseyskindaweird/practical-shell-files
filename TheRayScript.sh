@@ -40,29 +40,7 @@ chmod +x RustDesk.sh
 
 # Says something to you
 zenity --info --text="Hellooooo!!! If you wanna learn more about this popup, text meeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee! (this better work)"
-
-# Gibs the choice
-read -p "If you wanna run the script as shown above, press y. Otherwise, press N." choice
-
-if [ "$choice" == "y" ]; then
-  sudo ./RustDesk.sh
-  exit 1
-else
-  echo "Alright, continuing.."
-fi
-
-# Moves the RustDesk.sh file
-source_file="RustDesk.sh"
-destination_directory="/home/oldscript/"
-
-# Check if the source file exists
-if [ -e "$source_file" ]; then
-    # Move the file to the destination directory
-    mv "$source_file" "$destination_directory"
-    echo "File '$source_file' has been moved to '$destination_directory'."
-else
-    echo "File has already been moved, continuing.."
-fi
+echo "That popup"
 
 # Download an example .sh file
 wget -O Updater.sh https://github.com/strangetheproot/practical-shell-files/blob/main/Updater.sh
