@@ -33,7 +33,7 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 echo "GRUB Updated!"
 
 # Grab the script to run the AppImage
-wget -O RustDesk.sh https://github.com/strangetheproot/practical-shell-files/blob/main/RustDesk.sh
+wget -O RustDesk.sh https://raw.githubusercontent.com/strangetheproot/practical-shell-files/main/RustDesk.sh
 
 # Make it executable
 chmod +x RustDesk.sh
@@ -43,7 +43,7 @@ zenity --info --text="Hellooooo!!! If you wanna learn more about this popup, tex
 echo "That popup"
 
 # Download an example .sh file
-wget -O Updater.sh https://github.com/strangetheproot/practical-shell-files/blob/main/Updater.sh
+wget -O Updater.sh https://raw.githubusercontent.com/strangetheproot/practical-shell-files/main/Updater.sh
 
 # Make the downloaded file executable
 chmod +x Updater.sh
