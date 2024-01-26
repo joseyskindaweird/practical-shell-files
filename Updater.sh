@@ -7,11 +7,11 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 # Makes a folder to store the file in
-sudo mkdir /home/oldscript
+sudo mkdir /home/oldscript/
 
 # Moves a file, only here if i gave you the script. You know who you is :3
 source_file="TheRayScript.sh"
-destination_directory="/home/oldscript"
+destination_directory="/home/oldscript/"
 
 # Check if the source file exists
 if [ -e "$source_file" ]; then
@@ -47,6 +47,6 @@ read -p "Press 'y' to exit: " choice
 if [ "$choice" == "y" ]; then
   exit 0
 else
-  echo "Invalid choice. Exiting."
+  echo "Erm.... wrong key but we still leaving."
   exit 1
 fi
