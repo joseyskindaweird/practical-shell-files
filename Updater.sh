@@ -46,7 +46,7 @@ echo "You're up to date <3"
 read -p "Press 'y' to exit: " choice
 
 if [ "$choice" == "y" ]; then
-  exit 0
+  exit 1
 else
   echo "Erm.... wrong key but we still leaving."
   exit 1
