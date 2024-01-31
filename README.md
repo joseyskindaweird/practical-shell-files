@@ -1,1 +1,1 @@
-# Why did i do it like this, revamps coming during the weekend ._.
+# Doing lots of changes during the weekend. :3
