@@ -47,11 +47,11 @@ Now you've reached the fork in the road, now you have to choose which scripts to
 
 Pick a script to run:
 
-`SimplePackageManager.sh` Run this script to install some essential packages (Firefox, [Thorium](https://github.com/Alex313031/thorium), Discord, Spotify, etc.) This one is the most complex so it will have the most code and the longest README. The guide will be linked [here](https://github.com/strangetheproot/practical-shell-files/guides/SimplePackageManagerHelp.md).
+`SimplePackageManager.sh` Run this script to install some essential packages (Firefox, [Thorium](https://github.com/Alex313031/thorium), Discord, Spotify, etc.) This one is the most complex so it will have the most code and the longest README. The guide will be linked [here](https://github.com/strangetheproot/practical-shell-files/blob/main/guides/SimplePackageManagerHelp.md).
 
-`Updater.sh` Run this script in order to update your system automatically. You must have `yay` installed, we'll cover how to use this script in [this](https://github.com/strangetheproot/practical-shell-files/guides/UpdaterScriptHelp.md) documentation. 
+`Updater.sh` Run this script in order to update your system automatically. You must have `yay` installed, we'll cover how to use this script in [this](https://github.com/strangetheproot/practical-shell-files/blob/main/guides/UpdaterScriptHelp.md) documentation. 
 
-`OptionalStuff.sh` Run this script to install some small fun programs like games. [Here's](https://github.com/strangetheproot/practical-shell-files/guides/OptionalStuffHelp.md) the guide for it.
+`OptionalStuff.sh` Run this script to install some small fun programs like games. [Here's](https://github.com/strangetheproot/practical-shell-files/blob/main/guides/OptionalStuffHelp.md) the guide for it.
 
 
 
