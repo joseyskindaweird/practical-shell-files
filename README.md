@@ -8,7 +8,7 @@ If you don't know what to do, follow the steps below and I'll walk ya through it
 First step, grabbing the files. You need the package `git` for this.
 Should be installed by default, but here's how to install it:
 
-#### Install
+#### Install `git`
 ``````
 sudo pacman -S git
 ``````
