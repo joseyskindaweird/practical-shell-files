@@ -4,7 +4,7 @@ This is the Documentation for `SimplePackageManager` script. The biggest script 
 
 #### [`Discord`](https://discord.com) Discord is a messaging app/social media service. I won't be explaining too much since it is on their website.
 #### [`Spotify`](https://spotify.com) A proprietary music streaming service.
-#### [`Thorium Browser SSE3 and AVX2`](https://thorium.rocks) A fork of Chromium that aims for speed. SSE3 for older CPUs and AVX2 for newer CPUs, use [`CPU-X`](https://aur.archlinux.org/packages/cpu-x) which will be covered later to find out what CPU you got.
+#### [`Thorium Browser SSE3 and AVX2`](https://thorium.rocks) A fork of Chromium that aims for speed and privacy. SSE3 for older CPUs and AVX2 for newer CPUs, use [`CPU-X`](https://aur.archlinux.org/packages/cpu-x) which will be covered later to find out what CPU technologies your CPU supports.
 #### [`Steam`](https://steampowered.com/) A proprietary game launcher.
 #### [`Retroarch`](https://www.retroarch.com/) An open source emulation app for *almost* every console.
 #### `Bluetooth` (arch systems). This option installs a few packages to get bluetooth working on Arch based systems. These packages are: [`bluez`](https://archlinux.org/packages/extra/x86_64/bluez/), [`blueman`](https://archlinux.org/packages/extra/x86_64/blueman/), and [`bluez-utils`](https://archlinux.org/packages/extra/x86_64/bluez-utils/). This FINALLY allows you to use blueooth on your arch system if you've been having issues with that. It's a life saver.
