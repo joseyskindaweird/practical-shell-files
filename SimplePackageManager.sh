@@ -34,14 +34,16 @@ echo "6. Retroarch"
 echo "7. Bluetooth (see docs)"
 echo "8. CPU-X"
 echo "9. VSCodium"
-echo "10. Chromebook-linux-audio (see docs)"
+echo "10. Chromebook-Linux-Audio (see docs)"
 echo "11. Octopi" 
+echo "12. Mercury (Standard)"
+echo "13. Mercury (SSE3)"
 
 # Prompt the user for input
-read -p "Enter the number of the program you want to run (1-11): " choice
+read -p "Enter the number of the program you want to run (1-13): " choice
 
 # Validate the user input
-if ((choice < 1 || choice > 11)); then
+if ((choice < 1 || choice > 13)); then
     echo "Invalid choice. Please enter a number between 1 and 11."
         exit 1
 fi
@@ -55,10 +57,40 @@ case $choice in
         sudo pacman -S spotify-launcher --noconfirm
         ;;
     3)
-        yay -S thorium-browser-sse3-bin --noconfirm
+        # AUR Package is poorly maintained! (thanks a lot). We're doing the manual method cuz of it.
+        echo "Installing dependencies.."
+        sudo pacman -S alsa-lib at-spi2-core cairo dbus libcups libnotify libxcomposite libxkbcommon libxrandr mesa nspr nss pango --noconfirm
+        mkdir thorium-browser-sse3-building
+        cd thorium-browser-sse3-building
+        wget https://github.com/Alex313031/thorium/releases/download/M120.0.6099.235/thorium-browser_120.0.6099.235_SSE3.deb
+        ar x thorium-browser_120.0.6099.235_SSE3.deb
+        tar -xvf control.tar.gz
+        tar -xvf data.tar.gz
+        sudo cp ./etc/* /etc/
+        sudo cp ./opt/* /opt/
+        sudo cp ./usr/* /usr/
+        echo "Finished!"
+        cd .. 
+        sudo rm -rf thorium-browser-sse3-building
+        # When thorium is updated, gotta update this too! hooray..
         ;;
     4)
-        yay -S thorium-browser-bin --noconfirm
+        # AUR package is errored out, great..
+        echo "Installing dependencies"
+        sudo pacman -S alsa-lib at-spi2-core cairo dbus libcups libnotify libxcomposite libxkbcommon libxrandr mesa nspr nss pango --noconfirm 
+        mkdir thorium-browser-building
+        cd thorium-browser-building
+        wget https://github.com/Alex313031/thorium/releases/download/M120.0.6099.235/thorium-browser_120.0.6099.235_amd64.deb
+        ar x thorium-browser_120.0.6099.235_amd64.deb
+        tar -xvf control.tar.gz
+        tar -xvf data.tar.gz
+        sudo cp ./etc/* /etc/
+        sudo cp ./opt/* /opt/
+        sudo cp ./usr/* /usr/
+        echo "Finished!"
+        cd ..
+        sudo rm -rf thorium-browser-building
+        # Updates, updates.. nyeheheh...
         ;;
     5)
         sudo pacman -S steam --noconfirm
@@ -70,7 +102,7 @@ case $choice in
         sudo pacman -S bluez blueman bluez-utils --noconfirm
         sudo modprobe btusb
         sudo systemctl enable bluetooth && sudo systemctl start bluetooth
-        read -p "Do you want to reboot now (Y/N)? " reboot_choice
+        read -p "Do you want to reboot now to apply changes? (Y/N)? " reboot_choice
         if [[ $reboot_choice == "Y" || $reboot_choice == "y" ]]; then
             sudo reboot
         fi
@@ -98,6 +130,42 @@ case $choice in
     11)
         yay -S octopi --noconfirm
         ;;
+    12)
+       echo "Installing dependencies.."
+       sudo pacman -S alsa-lib dbus-glib gtk3 libnotify --noconfirm
+       mkdir mercury-building
+       cd mercury-building
+       wget https://github.com/Alex313031/Mercury/releases/download/v.122.0.2/mercury-browser_122.0.2_AVX2.deb
+       ar x mercury-browser_122.0.2_AVX2.deb
+       tar -xvf control.tar.gz
+       tar -xvf data.tar.gz
+       echo "Copying files..."
+       sudo cp ./etc/* /etc/
+       sudo cp ./opt/* /opt/
+       sudo cp ./usr/* /usr/
+       echo "Finished!"
+       cd ..
+       sudo rm -rf mercury-building
+       # Have to update this every single time there's a new version of mercury.. may make an AUR package..
+       ;;
+    13)
+       echo "Installing dependencies.."
+       sudo pacman -S alsa-lib dbus-glib gtk3 libnotify --noconfirm
+       mkdir mercury-sse3-building
+       cd mercury-sse3-building
+       wget https://github.com/Alex313031/Mercury/releases/download/v.122.0.2/mercury-browser_122.0.2_SSE3.deb
+       ar x mercury-browser_122.0.2_SSE3.deb
+       tar -xvf control.tar.gz
+       tar -xvf data.tar.gz
+       echo "Copying files..."
+       sudo cp ./etc/* /etc/
+       sudo cp ./opt/* /opt/
+       sudo cp ./usr/* /usr/
+       echo "Finished!"
+       cd ..
+       sudo rm -rf mercury-sse3-building
+       # Updating... updating.. hee..hee..
+       ;;
     *)
         echo "Invalid choice."
         exit 1
