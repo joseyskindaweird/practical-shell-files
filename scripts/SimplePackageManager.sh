@@ -47,7 +47,7 @@ echo "19. qBitorrent"
 echo "20. RustDesk"
 
 # Prompt the user for input
-read -p "Enter the number of the program you want to run (1-20): " choice
+read -p "Enter the number of the program you want to install (1-20): " choice
 
 # Validate the user input
 if ((choice < 1 || choice > 20)); then
@@ -65,17 +65,17 @@ case $choice in
         ;;
     3)
         # AUR Package is poorly maintained! (thanks a lot). We're doing the manual method cuz of it.
+        sudo mkdir thorium-browser-sse3-building
         echo "Installing dependencies.."
         sudo pacman -S alsa-lib at-spi2-core cairo dbus libcups libnotify libxcomposite libxkbcommon libxrandr mesa nspr nss pango --noconfirm
-        mkdir thorium-browser-sse3-building
         cd thorium-browser-sse3-building
         wget https://github.com/Alex313031/thorium/releases/download/M120.0.6099.235/thorium-browser_120.0.6099.235_SSE3.deb
         ar x thorium-browser_120.0.6099.235_SSE3.deb
         tar -xvf control.tar.gz
         tar -xvf data.tar.gz
-        sudo cp ./etc/* /etc/
-        sudo cp ./opt/* /opt/
-        sudo cp ./usr/* /usr/
+        sudo cp -r ./etc/* /etc/
+        sudo cp -r ./opt/* /opt/
+        sudo cp -r ./usr/* /usr/
         echo "Finished!"
         cd .. 
         sudo rm -rf thorium-browser-sse3-building
@@ -85,15 +85,15 @@ case $choice in
         # AUR package is errored out, great..
         echo "Installing dependencies"
         sudo pacman -S alsa-lib at-spi2-core cairo dbus libcups libnotify libxcomposite libxkbcommon libxrandr mesa nspr nss pango --noconfirm 
-        mkdir thorium-browser-building
+        mkdir -p thorium-browser-building
         cd thorium-browser-building
         wget https://github.com/Alex313031/thorium/releases/download/M120.0.6099.235/thorium-browser_120.0.6099.235_amd64.deb
         ar x thorium-browser_120.0.6099.235_amd64.deb
         tar -xvf control.tar.gz
         tar -xvf data.tar.gz
-        sudo cp ./etc/* /etc/
-        sudo cp ./opt/* /opt/
-        sudo cp ./usr/* /usr/
+        sudo cp -r ./etc/* /etc/
+        sudo cp -r ./opt/* /opt/
+        sudo cp -r ./usr/* /usr/
         echo "Finished!"
         cd ..
         sudo rm -rf thorium-browser-building
@@ -140,16 +140,16 @@ case $choice in
     12)
        echo "Installing dependencies.."
        sudo pacman -S alsa-lib dbus-glib gtk3 libnotify --noconfirm
-       mkdir mercury-building
+       mkdir -p mercury-building
        cd mercury-building
        wget https://github.com/Alex313031/Mercury/releases/download/v.122.0.2/mercury-browser_122.0.2_AVX2.deb
        ar x mercury-browser_122.0.2_AVX2.deb
        tar -xvf control.tar.gz
        tar -xvf data.tar.gz
        echo "Copying files..."
-       sudo cp ./etc/* /etc/
-       sudo cp ./opt/* /opt/
-       sudo cp ./usr/* /usr/
+       sudo cp -r ./etc/* /etc/
+       sudo cp -r ./opt/* /opt/
+       sudo cp -r ./usr/* /usr/
        echo "Finished!"
        cd ..
        sudo rm -rf mercury-building
@@ -158,16 +158,16 @@ case $choice in
     13)
        echo "Installing dependencies.."
        sudo pacman -S alsa-lib dbus-glib gtk3 libnotify --noconfirm
-       mkdir mercury-sse3-building
+       mkdir -p mercury-sse3-building
        cd mercury-sse3-building
        wget https://github.com/Alex313031/Mercury/releases/download/v.122.0.2/mercury-browser_122.0.2_SSE3.deb
        ar x mercury-browser_122.0.2_SSE3.deb
        tar -xvf control.tar.gz
        tar -xvf data.tar.gz
        echo "Copying files..."
-       sudo cp ./etc/* /etc/
-       sudo cp ./opt/* /opt/
-       sudo cp ./usr/* /usr/
+       sudo cp -r ./etc/* /etc/
+       sudo cp -r ./opt/* /opt/
+       sudo cp -r ./usr/* /usr/
        echo "Finished!"
        cd ..
        sudo rm -rf mercury-sse3-building
@@ -197,21 +197,12 @@ case $choice in
        ;;
     20)
        # Oh boy, gonna have to update this one too.
-       echo "Installing dependencies.."
-       sudo pacman -S alsa-lib gst-plugin-pipewire gst-plugins-base gst-plugins-base-libs gtk3 hicolor-icon-theme libappindicator-gtk3 libva libvdpau libxcb libxfixes pam pulseaudio xdg-user-dirs xdg-utils xdotool --noconfirm
        mkdir rustdesk-building
-       cd rustdesk-building
-       wget https://github.com/rustdesk/rustdesk/releases/download/1.2.3/rustdesk-1.2.3-x86_64.deb
+       echo "Installing dependencies.."
+       sudo pacman -S alsa-lib gst-plugin-pipewire gst-plugins-base gst-plugins-base-libs gtk3 hicolor-icon-theme libappindicator-gtk3 libva libvdpau libxcb libxfixes pam xdg-user-dirs xdg-utils xdotool --noconfirm
+       wget -P rustdesk-building https://github.com/rustdesk/rustdesk/releases/download/1.2.3/rustdesk-1.2.3-x86_64.deb
        ar x rustdesk-1.2.3-x86_64.deb
-       tar -xvf control.tar.gz
-       tar -xvf data.tar.gz
-       echo "Copying files..."
-       sudo cp ./etc/* /etc/
-       sudo cp ./opt/* /opt/
-       sudo cp ./usr/* /usr/
-       echo "Finished!"
-       cd ..
-       sudo rm -rf rustdesk-building
+
        ;;
     *)
         echo "Invalid choice."
