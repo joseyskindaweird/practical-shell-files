@@ -198,7 +198,7 @@ case $choice in
     20)
        # Oh boy, gonna have to update this one too.
        echo "Installing dependencies.."
-       sudo pacman -S alsa-lib gst-plugin-pipewire gst-plugins-base gst-plugins-base-libs gtk3 hicolor-icon-theme libappindicator-gtk3 libva libvdpau libxcb libxfixes pam pulseaudio xdg-user-dirs xdg-utils xdotool
+       sudo pacman -S alsa-lib gst-plugin-pipewire gst-plugins-base gst-plugins-base-libs gtk3 hicolor-icon-theme libappindicator-gtk3 libva libvdpau libxcb libxfixes pam pulseaudio xdg-user-dirs xdg-utils xdotool --noconfirm
        mkdir rustdesk-building
        cd rustdesk-building
        wget https://github.com/rustdesk/rustdesk/releases/download/1.2.3/rustdesk-1.2.3-x86_64.deb
