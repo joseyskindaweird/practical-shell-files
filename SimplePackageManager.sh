@@ -38,13 +38,20 @@ echo "10. Chromebook-Linux-Audio (see docs)"
 echo "11. Octopi" 
 echo "12. Mercury (Standard)"
 echo "13. Mercury (SSE3)"
+echo "14. Brave"
+echo "15. Google Chrome"
+echo "16. Chromium"
+echo "17. Firefox"
+echo "18. KDE Connect"
+echo "19. qBitorrent"
+echo "20. RustDesk"
 
 # Prompt the user for input
-read -p "Enter the number of the program you want to run (1-13): " choice
+read -p "Enter the number of the program you want to run (1-20): " choice
 
 # Validate the user input
-if ((choice < 1 || choice > 13)); then
-    echo "Invalid choice. Please enter a number between 1 and 11."
+if ((choice < 1 || choice > 20)); then
+    echo "Invalid choice. Please enter a number between 1 and 20."
         exit 1
 fi
 
@@ -165,6 +172,46 @@ case $choice in
        cd ..
        sudo rm -rf mercury-sse3-building
        # Updating... updating.. hee..hee..
+       ;;
+    14)
+       yay -S brave --noconfirm
+       ;;
+    15)
+       echo "Get ready for bloat.."
+       yay -S google-chrome --noconfirm
+       ;;
+    16)
+       echo "Thorium's better...."
+       sudo pacman -S chromium --noconfirm
+       ;;
+    17)
+       echo "Try mercury :3"
+       sudo pacman -S firefox --noconfirm
+       ;;
+    18)
+       sudo pacman -S kdeconnect --noconfirm
+       ;;
+    19)
+       sudo pacman -S qbittorrent --noconfirm
+       echo "Nice. >:3"
+       ;;
+    20)
+       # Oh boy, gonna have to update this one too.
+       echo "Installing dependencies.."
+       sudo pacman -S alsa-lib gst-plugin-pipewire gst-plugins-base gst-plugins-base-libs gtk3 hicolor-icon-theme libappindicator-gtk3 libva libvdpau libxcb libxfixes pam pulseaudio xdg-user-dirs xdg-utils xdotool
+       mkdir rustdesk-building
+       cd rustdesk-building
+       wget https://github.com/rustdesk/rustdesk/releases/download/1.2.3/rustdesk-1.2.3-x86_64.deb
+       ar x rustdesk-1.2.3-x86_64.deb
+       tar -xvf control.tar.gz
+       tar -xvf data.tar.gz
+       echo "Copying files..."
+       sudo cp ./etc/* /etc/
+       sudo cp ./opt/* /opt/
+       sudo cp ./usr/* /usr/
+       echo "Finished!"
+       cd ..
+       sudo rm -rf rustdesk-building
        ;;
     *)
         echo "Invalid choice."
