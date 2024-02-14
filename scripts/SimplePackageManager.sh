@@ -27,8 +27,8 @@ fi
 echo "Select a program:"
 echo "1. Discord"
 echo "2. Spotify"
-echo "3. Thorium (SSE3)"
-echo "4. Thorium (Standard)"
+echo "3. Thorium (SSE3 - Not avalible)"
+echo "4. Thorium (Standard - Not avalible)"
 echo "5. Steam"
 echo "6. Retroarch"
 echo "7. Bluetooth (see docs)"
@@ -37,7 +37,7 @@ echo "9. VSCodium"
 echo "10. Chromebook-Linux-Audio (see docs)"
 echo "11. Octopi" 
 echo "12. Mercury (Standard)"
-echo "13. Mercury (SSE3)"
+echo "13. Github Desktop"
 echo "14. Brave"
 echo "15. Google Chrome"
 echo "16. Chromium"
@@ -64,40 +64,12 @@ case $choice in
         sudo pacman -S spotify-launcher --noconfirm
         ;;
     3)
-        # AUR Package is poorly maintained! (thanks a lot). We're doing the manual method cuz of it.
-        sudo mkdir thorium-browser-sse3-building
-        echo "Installing dependencies.."
-        sudo pacman -S alsa-lib at-spi2-core cairo dbus libcups libnotify libxcomposite libxkbcommon libxrandr mesa nspr nss pango --noconfirm
-        cd thorium-browser-sse3-building
-        wget https://github.com/Alex313031/thorium/releases/download/M120.0.6099.235/thorium-browser_120.0.6099.235_SSE3.deb
-        ar x thorium-browser_120.0.6099.235_SSE3.deb
-        tar -xvf control.tar.gz
-        tar -xvf data.tar.gz
-        sudo cp -r ./etc/* /etc/
-        sudo cp -r ./opt/* /opt/
-        sudo cp -r ./usr/* /usr/
-        echo "Finished!"
-        cd .. 
-        sudo rm -rf thorium-browser-sse3-building
-        # When thorium is updated, gotta update this too! hooray..
+        # I hate the AUR
+        echo "Not avalible, i hate the AUR."
         ;;
     4)
         # AUR package is errored out, great..
-        echo "Installing dependencies"
-        sudo pacman -S alsa-lib at-spi2-core cairo dbus libcups libnotify libxcomposite libxkbcommon libxrandr mesa nspr nss pango --noconfirm 
-        mkdir -p thorium-browser-building
-        cd thorium-browser-building
-        wget https://github.com/Alex313031/thorium/releases/download/M120.0.6099.235/thorium-browser_120.0.6099.235_amd64.deb
-        ar x thorium-browser_120.0.6099.235_amd64.deb
-        tar -xvf control.tar.gz
-        tar -xvf data.tar.gz
-        sudo cp -r ./etc/* /etc/
-        sudo cp -r ./opt/* /opt/
-        sudo cp -r ./usr/* /usr/
-        echo "Finished!"
-        cd ..
-        sudo rm -rf thorium-browser-building
-        # Updates, updates.. nyeheheh...
+        echo "Package not avalible, AUR sucks."
         ;;
     5)
         sudo pacman -S steam --noconfirm
@@ -106,10 +78,8 @@ case $choice in
         sudo pacman -S retroarch --noconfirm
         ;;
     7)
-        sudo pacman -S bluez blueman bluez-utils --noconfirm
-        sudo modprobe btusb
-        sudo systemctl enable bluetooth && sudo systemctl start bluetooth
-        read -p "Do you want to reboot now to apply changes? (Y/N)? " reboot_choice
+        cd; curl -LO https://raw.githubusercontent.com/strangetheproot/practical-shell-files/main/scripts/Bluetooth.sh && sudo bash Bluetooth.sh
+        read -p "Do you want to reboot now to apply changes? (Y/N)? " reboot_choice04u-847=85=
         if [[ $reboot_choice == "Y" || $reboot_choice == "y" ]]; then
             sudo reboot
         fi
@@ -138,54 +108,22 @@ case $choice in
         yay -S octopi --noconfirm
         ;;
     12)
-       echo "Installing dependencies.."
-       sudo pacman -S alsa-lib dbus-glib gtk3 libnotify --noconfirm
-       mkdir -p mercury-building
-       cd mercury-building
-       wget https://github.com/Alex313031/Mercury/releases/download/v.122.0.2/mercury-browser_122.0.2_AVX2.deb
-       ar x mercury-browser_122.0.2_AVX2.deb
-       tar -xvf control.tar.gz
-       tar -xvf data.tar.gz
-       echo "Copying files..."
-       sudo cp -r ./etc/* /etc/
-       sudo cp -r ./opt/* /opt/
-       sudo cp -r ./usr/* /usr/
-       echo "Finished!"
-       cd ..
-       sudo rm -rf mercury-building
-       # Have to update this every single time there's a new version of mercury.. may make an AUR package..
+       yay -S mercury-browser-bin --noconfirm
        ;;
     13)
-       echo "Installing dependencies.."
-       sudo pacman -S alsa-lib dbus-glib gtk3 libnotify --noconfirm
-       mkdir -p mercury-sse3-building
-       cd mercury-sse3-building
-       wget https://github.com/Alex313031/Mercury/releases/download/v.122.0.2/mercury-browser_122.0.2_SSE3.deb
-       ar x mercury-browser_122.0.2_SSE3.deb
-       tar -xvf control.tar.gz
-       tar -xvf data.tar.gz
-       echo "Copying files..."
-       sudo cp -r ./etc/* /etc/
-       sudo cp -r ./opt/* /opt/
-       sudo cp -r ./usr/* /usr/
-       echo "Finished!"
-       cd ..
-       sudo rm -rf mercury-sse3-building
-       # Updating... updating.. hee..hee..
+       yay -S github-desktop --noconfirm
        ;;
     14)
        yay -S brave --noconfirm
        ;;
     15)
-       echo "Get ready for bloat.."
+       echo "Get ready for bloat..you sure about this?"
        yay -S google-chrome --noconfirm
        ;;
     16)
-       echo "Thorium's better...."
        sudo pacman -S chromium --noconfirm
        ;;
     17)
-       echo "Try mercury :3"
        sudo pacman -S firefox --noconfirm
        ;;
     18)
@@ -193,16 +131,19 @@ case $choice in
        ;;
     19)
        sudo pacman -S qbittorrent --noconfirm
-       echo "Nice. >:3"
        ;;
     20)
-       # Oh boy, gonna have to update this one too.
-       mkdir rustdesk-building
-       echo "Installing dependencies.."
-       sudo pacman -S alsa-lib gst-plugin-pipewire gst-plugins-base gst-plugins-base-libs gtk3 hicolor-icon-theme libappindicator-gtk3 libva libvdpau libxcb libxfixes pam xdg-user-dirs xdg-utils xdotool --noconfirm
-       wget -P rustdesk-building https://github.com/rustdesk/rustdesk/releases/download/1.2.3/rustdesk-1.2.3-x86_64.deb
-       ar x rustdesk-1.2.3-x86_64.deb
-
+    if ! which flatpak > /dev/null; then
+        echo "You don't have flatpak. Installing..."
+        sudo pacman -S flatpak --noconfirm
+        read -p "Do you want to reboot now to apply changes? (Y/N)? " reboot_choice
+        if [[ $reboot_choice == "Y" || $reboot_choice == "y" ]]; then
+            sudo reboot
+        fi
+    fi
+       wget https://github.com/rustdesk/rustdesk/releases/download/1.2.3/rustdesk-1.2.3-x86_64.flatpak
+       echo "Press Y to install Rustdesk"
+       sudo flatpak install rustdesk-1.2.3-x86_64.flatpak 
        ;;
     *)
         echo "Invalid choice."
