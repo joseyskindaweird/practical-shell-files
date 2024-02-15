@@ -22,6 +22,9 @@ This is the Documentation for `SimplePackageManager` script. The biggest script 
 #### [`KDE Connect`](https://kdeconnect.kde.org/) Used to link your phone and your Linux or Windows PC together. Share files, clipboard history, and more.
 #### [`qBittorent`](https://www.qbittorrent.org/) An open source torrent client.
 #### [`RustDesk`](https://rustdesk.com/) An open source remote desktop application, written in Rust. (flatpak version, needs to updated manually by me)
+#### [`Spicetify`](https://spicetify.app) Powerful CLI to take control of Spotify.
+#### [`auto-cpufreq`](https://github.com/AdnanHodzic/auto-cpufreq) A tool to manage and monitor your CPU power output.
+#### [`Lutris`](https://lutris.net/) An open source game client.
 That's everything this script has to offer so far.
 
 

@@ -45,12 +45,15 @@ echo "17. Firefox"
 echo "18. KDE Connect"
 echo "19. qBitorrent"
 echo "20. RustDesk"
+echo "21. Spicetify"
+echo "22. auto-cpufreq"
+echo "23. Lutris"
 
 # Prompt the user for input
 read -p "Enter the number of the program you want to install (1-20): " choice
 
 # Validate the user input
-if ((choice < 1 || choice > 20)); then
+if ((choice < 1 || choice > 23)); then
     echo "Invalid choice. Please enter a number between 1 and 20."
         exit 1
 fi
@@ -143,6 +146,19 @@ case $choice in
        wget https://github.com/rustdesk/rustdesk/releases/download/1.2.3/rustdesk-1.2.3-x86_64.flatpak
        echo "Press Y to install Rustdesk"
        sudo flatpak install rustdesk-1.2.3-x86_64.flatpak 
+       ;;
+    21)
+       yay -S spicetify-cli --noconfirm
+       curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/resources/install.sh | sh
+       spicetify apply
+       ;;
+    22)
+       git clone https://github.com/AdnanHodzic/auto-cpufreq.git
+       cd auto-cpufreq && sudo ./auto-cpufreq-installer
+       sudo auto-cpufreq --install
+       ;;
+    23)
+       sudo pacman -S lutris --noconfirm
        ;;
     *)
         echo "Invalid choice."
