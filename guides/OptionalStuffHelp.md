@@ -9,8 +9,14 @@ I'll go over every program in here.
 #### [`2048`](https://archlinux.org/packages/extra/x86_64/gnome-2048/) If you know the game [2048](https://en.wikipedia.org/wiki/2048_(video_game)), it's an adaptation for linux with some enhancments added to change color pallettes.
 #### [`KNetWalk`](https://archlinux.org/packages/extra/x86_64/knetwalk/) A game for nerds. Match the cables from the network to the computers. You'll find it out from there.
 #### [`Tetris-like game`](https://archlinux.org/packages/extra/x86_64/quadrapassel/) This game is clone of Tetris, called "`quadrapassel`". It works just like tetris with a few enhancments added. You probably know how to play Tetris soooo.... yeah
+#### [`FIGlet`](http://www.figlet.org/) Turns text into ascii art.
+#### [`cMatrix`](https://www.asty.org/cmatrix/) "Linux users installing a web browser"
+#### [`sl`](https://github.com/eyJhb/sl) Just in case you mess up `ls`.
+#### [`xeyes`](https://archlinux.org/packages/extra/x86_64/xorg-xeyes/) Watches you wherever you go...
+#### [`eSpeak`](https://espeak.sourceforge.net/) Uses a synthesizer to say what you type.
+#### [`Asciiquarium`](https://archlinux.org/packages/extra/any/asciiquarium/) Just in case you don't got an ocean at your house.
 
-That's all that was added as of 2/7/2024, recommend more on my socials!
+That's all folks!
 
 
 

@@ -8,6 +8,12 @@ echo "3. Telnet"
 echo "4. 2048"
 echo "5. KNetWalk"
 echo "6. Tetris-like game"
+echo "7. FIGlet"
+echo "8. cMatrix"
+echo "9. sl"
+echo "10. xEyes"
+echo "11. eSpeak"
+echo "12. asciiquarium"
 
 # Prompt the user for input
 read -p "Enter the number of the program you want to run (1-6): " choice
@@ -37,6 +43,25 @@ case $choice in
         ;;
     6)
         sudo pacman -S quadrapassel --noconfirm
+        ;;
+    7)
+        sudo pacman -S figlet --noconfirm
+        ;;
+    8)
+        sudo pacman -S cmatrix --noconfirm
+        ;;
+    9)
+        sudo pacman -S sl --noconfirm
+        sl
+        ;;
+    10)
+        sudo pacman -S xorg-xeyes --noconfirm
+        ;;
+    11)
+        yay -S espeak --noconfirm
+        ;;
+    12)
+        sudo pacman -S asciiquarium --noconfirm
         ;;
     *)
         echo "Invalid choice."
