@@ -27,8 +27,8 @@ fi
 echo "Select a program:"
 echo "1. Discord"
 echo "2. Spotify"
-echo "3. Thorium (SSE3 - Not avalible)"
-echo "4. Thorium (Standard - Not avalible)"
+echo "3. LibreOffice"
+echo "4. Thorium"
 echo "5. Steam"
 echo "6. Retroarch"
 echo "7. Bluetooth (see docs)"
@@ -55,7 +55,7 @@ if ((choice < 1 || choice > 20)); then
         exit 1
 fi
 
-# Now you can add logic to launch the selected program
+# Program listing
 case $choice in
     1)
         sudo pacman -S discord --noconfirm
@@ -64,12 +64,11 @@ case $choice in
         sudo pacman -S spotify-launcher --noconfirm
         ;;
     3)
-        # I hate the AUR
-        echo "Not avalible, i hate the AUR."
+        sudo pacman -S libreoffice-still --noconfirm
         ;;
     4)
-        # AUR package is errored out, great..
-        echo "Package not avalible, AUR sucks."
+        echo "Compressing will take a while! Be patient." 
+        yay -S thorium-browser-bin --noconfirm
         ;;
     5)
         sudo pacman -S steam --noconfirm
@@ -152,4 +151,4 @@ case $choice in
 esac
       
 echo "Recommend packages to put here on the socials on my README!"
-echo "Practical shell scripts by strange."
+echo "Practical shell scripts by Strange."
