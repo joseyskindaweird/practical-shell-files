@@ -36,6 +36,16 @@ echo "Service started.."
     fi
 }
 
+echo "Would you like to reboot to apply changes? (y/n)"
+    read -r answer
+    if [[ $answer =~ ^[Yy]$ ]] ;then
+        reboot
+        echo "Bye bye!"
+    fi
+else
+
+fi
+
 # Beginning of the script
 clear
 echo "Starting.."
