@@ -50,11 +50,11 @@ echo "22. auto-cpufreq"
 echo "23. Lutris"
 
 # Prompt the user for input
-read -p "Enter the number of the program you want to install (1-20): " choice
+read -p "Enter the number of the program you want to install (1-23): " choice
 
 # Validate the user input
 if ((choice < 1 || choice > 23)); then
-    echo "Invalid choice. Please enter a number between 1 and 20."
+    echo "Invalid choice. Please enter a number between 1 and 23."
         exit 1
 fi
 
@@ -101,7 +101,7 @@ case $choice in
             sudo pacman -S python --noconfirm
         fi
         git clone https://github.com/WeirdTreeThing/chromebook-linux-audio.git
-        cd chromebook-linux-audio
+        cd chromebook-linux-audio || exit
         ./setup-audio
         cd ..
         sudo rm -rf chromebook-linux-audio

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Update the system
-echo "Updating.."
+echo "Updating main packages.."
 sudo pacman -Syu --noconfirm
 
 # Check if yay is installed
@@ -18,7 +18,7 @@ if ! command -v yay &> /dev/null; then
         rm -rf yay
     fi
 else
-    echo "yay is already installed."
+    echo "yay is already installed, continuing..."
 fi
 
 # Update the AUR

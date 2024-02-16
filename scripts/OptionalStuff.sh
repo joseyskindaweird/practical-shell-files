@@ -16,11 +16,11 @@ echo "11. eSpeak"
 echo "12. asciiquarium"
 
 # Prompt the user for input
-read -p "Enter the number of the program you want to run (1-6): " choice
+read -p "Enter the number of the program you want to install (1-12): " choice
 
 # Validate the user input
-if ((choice < 1 || choice > 6)); then
-    echo "Invalid choice. Please enter a number between 1 and 6."
+if ((choice < 1 || choice > 12)); then
+    echo "Invalid choice. Please enter a number between 1 and 12."
     exit 1
 fi
 

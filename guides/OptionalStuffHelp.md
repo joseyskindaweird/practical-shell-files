@@ -12,7 +12,7 @@ I'll go over every program in here.
 #### [`FIGlet`](http://www.figlet.org/) Turns text into ascii art.
 #### [`cMatrix`](https://www.asty.org/cmatrix/) "Linux users installing a web browser"
 #### [`sl`](https://github.com/eyJhb/sl) Just in case you mess up `ls`.
-#### [`xeyes`](https://archlinux.org/packages/extra/x86_64/xorg-xeyes/) Watches you wherever you go...
+#### [`xEyes`](https://archlinux.org/packages/extra/x86_64/xorg-xeyes/) Watches you wherever you go...
 #### [`eSpeak`](https://espeak.sourceforge.net/) Uses a synthesizer to say what you type.
 #### [`Asciiquarium`](https://archlinux.org/packages/extra/any/asciiquarium/) Just in case you don't got an ocean at your house.
 

@@ -25,6 +25,7 @@ This is the Documentation for `SimplePackageManager` script. The biggest script 
 #### [`Spicetify`](https://spicetify.app) Powerful CLI to take control of Spotify.
 #### [`auto-cpufreq`](https://github.com/AdnanHodzic/auto-cpufreq) A tool to manage and monitor your CPU power output.
 #### [`Lutris`](https://lutris.net/) An open source game client.
+
 That's everything this script has to offer so far.
 
 
