@@ -6,7 +6,7 @@ Select the number next to the program you want to grab. It'll install automatica
 
 #### [`Discord`](https://discord.com) A proprietary all-in-one voice and text chat.
 #### [`Spotify`](https://spotify.com) A proprietary music streaming service.
-#### [`Libreoffice`](https://www.libreoffice.org/) An open-source alternitive to Microsoft Office.
+#### [`LibreOffice`](https://www.libreoffice.org/) An open-source alternitive to Microsoft Office.
 #### [`Thorium`](https://thorium.rocks) A fork of Chromium that aims for speed and privacy.
 #### [`Steam`](https://steampowered.com/) A proprietary game launcher.
 #### [`Retroarch`](https://www.retroarch.com/) An open source emulation app.
