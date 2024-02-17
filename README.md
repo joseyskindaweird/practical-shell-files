@@ -2,19 +2,19 @@
 One command is all you need,
 Copy and paste the command you need into the terminal, let it do its thing.
 
-Simple Package Manager:
+[Simple Package Manager](https://github.com/strangetheproot/practical-shell-files/blob/main/guides/SimplePackageManagerHelp.md):
 
 ``````
 cd; curl -LO https://raw.githubusercontent.com/strangetheproot/practical-shell-files/main/scripts/SimplePackageManager.sh && sudo bash SimplePackageManager.sh
 ``````
 
-Optional Stuff:
+[Optional Stuff](https://github.com/strangetheproot/practical-shell-files/blob/main/guides/OptionalStuffHelp.md):
 
 ``````
 cd; curl -LO https://raw.githubusercontent.com/strangetheproot/practical-shell-files/main/scripts/OptionalStuff.sh && sudo bash OptionalStuff.sh
 ``````
 
-Updater:
+[Updater](https://github.com/strangetheproot/practical-shell-files/blob/main/guides/UpdaterScriptHelp.md):
 
 ``````
 cd; curl -LO https://raw.githubusercontent.com/strangetheproot/practical-shell-files/main/scripts/Updater.sh && sudo bash Updater.sh

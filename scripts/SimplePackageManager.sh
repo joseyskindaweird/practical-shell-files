@@ -48,13 +48,20 @@ echo "20. RustDesk"
 echo "21. Spicetify"
 echo "22. auto-cpufreq"
 echo "23. Lutris"
+echo "24. GIMP"
+echo "25. Filezilla"
+echo "26. Handbrake"
+echo "27. Java"
+echo "28. Neovim"
+echo "29. Kodi"
+echo "30. OBS"
 
 # Prompt the user for input
-read -p "Enter the number of the program you want to install (1-23): " choice
+read -p "Enter the number of the program you want to install (1-30): " choice
 
 # Validate the user input
-if ((choice < 1 || choice > 23)); then
-    echo "Invalid choice. Please enter a number between 1 and 23."
+if ((choice < 1 || choice > 30)); then
+    echo "Invalid choice. Please enter a number between 1 and 30."
         exit 1
 fi
 
@@ -159,6 +166,27 @@ case $choice in
        ;;
     23)
        sudo pacman -S lutris --noconfirm
+       ;;
+    24)
+       sudo pacman -S gimp --noconfirm
+       ;;
+    25)
+       sudo pacman -S filezilla --noconfirm
+       ;;
+    26)
+       sudo pacman -S handbrake --noconfirm
+       ;;
+    27)
+       sudo pacman -S jdk-openjdk --noconfirm
+       ;;
+    28)
+       sudo pacman -S neovim --noconfirm
+       ;;
+    29)
+       sudo pacman -S kodi --noconfirm
+       ;;
+    30)
+       sudo pacman -S obs-studio --noconfirm
        ;;
     *)
         echo "Invalid choice."
