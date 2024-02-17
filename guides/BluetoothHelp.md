@@ -1,6 +1,6 @@
 # Documentation for `Bluetooth.sh`
 
-Very short documentation, not meant to be ran directly but you can using the curl command below.
+Very short documentation. Not meant to be ran directly, but you can run it by itself using the curl command below.
 ``````
 cd; curl -LO https://raw.githubusercontent.com/strangetheproot/practical-shell-files/main/scripts/Bluetooth.sh && sudo bash Bluetooth.sh
 ``````
