@@ -14,6 +14,7 @@ Select the number next to the program you want to grab. It'll install automatica
 #### [`xEyes`](https://archlinux.org/packages/extra/x86_64/xorg-xeyes/) Watches you wherever you go...
 #### [`eSpeak`](https://espeak.sourceforge.net/) Uses a synthesizer to say what you type.
 #### [`Asciiquarium`](https://archlinux.org/packages/extra/any/asciiquarium/) Just in case you don't got an ocean at your house.
+#### [`Minesweeper`](https://wiki.gnome.org/Apps/Mines) A minesweeper clone for Linux.
 
 That's all folks!
 

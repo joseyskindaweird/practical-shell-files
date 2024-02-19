@@ -34,6 +34,11 @@ Select the number next to the program you want to grab. It'll install automatica
 #### [`Neovim`](https://neovim.io/) Vim but better-ified.
 #### [`Kodi`](https://kodi.tv/) An open source media center.
 #### [`OBS`](https://obsproject.com/) An open source screen broadcaster.
+#### [`NewsFlash`](https://gitlab.com/news-flash/news_flash_gtk) An RSS Reader.
+#### [`ProtonTricks`](https://github.com/Matoking/protontricks) A Winetricks-like tool for proton. Requires `Winetricks`.
+#### [`Wine`](https://www.winehq.org/) A Windows emulation layer for Linux.
+#### [`WineTricks`](https://wiki.winehq.org/Winetricks) Manages `Wine` in a cute GUI.
+#### [`GNOME Disks`](https://gitlab.gnome.org/GNOME/gnome-disk-utility) A GUI to manage disks.
 
 That's everything this script has to offer so far.
 

@@ -55,6 +55,11 @@ echo "27. Java"
 echo "28. Neovim"
 echo "29. Kodi"
 echo "30. OBS"
+echo "31. NewsFlash"
+echo "32. ProtonTricks"
+echo "33. Wine"
+echo "34. WineTricks"
+echo "35. GNOME Disks"
 
 # Prompt the user for input
 read -p "Enter the number of the program you want to install (1-30): " choice
@@ -187,6 +192,24 @@ case $choice in
        ;;
     30)
        sudo pacman -S obs-studio --noconfirm
+       ;;
+    31)
+       sudo pacman -S newsflash --noconfirm
+       ;;
+    32)
+       echo "Also needs WineTricks, installing.."
+       sudo pacman -S winetricks --noconfirm
+       echo "Now grabbing ProtonTricks" 
+       yay -S protontricks --noconfirm 
+       ;;
+    33)
+       sudo pacman -S wine wine-mono wine-gecko --noconfirm
+       ;;
+    34)
+       sudo pacman -S winetricks --noconfirm
+       ;;
+    35)
+       sudo pacman -S gnome-disk-utility --noconfirm
        ;;
     *)
         echo "Invalid choice."

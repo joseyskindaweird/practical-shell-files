@@ -14,6 +14,7 @@ echo "9. sl"
 echo "10. xEyes"
 echo "11. eSpeak"
 echo "12. asciiquarium"
+echo "13. Minesweeper"
 
 # Prompt the user for input
 read -p "Enter the number of the program you want to install (1-12): " choice
@@ -62,6 +63,9 @@ case $choice in
         ;;
     12)
         sudo pacman -S asciiquarium --noconfirm
+        ;;
+    13)
+        sudo pacman -S gnome-mines --noconfirm
         ;;
     *)
         echo "Invalid choice."
