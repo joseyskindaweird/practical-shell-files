@@ -155,7 +155,7 @@ case $choice in
             sudo reboot
         fi
     fi
-       wget https://github.com/rustdesk/rustdesk/releases/download/1.2.3/rustdesk-1.2.3-x86_64.flatpak
+       wget https://github.com/rustdesk/rustdesk/releases/download/1.2.3-1/rustdesk-1.2.3-x86_64.flatpak
        echo "Press Y to install Rustdesk"
        sudo flatpak install rustdesk-1.2.3-x86_64.flatpak 
        ;;
