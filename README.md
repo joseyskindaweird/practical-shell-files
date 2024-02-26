@@ -2,10 +2,10 @@
 One command is all you need,
 Copy and paste the command you need into the terminal, let it do its thing.
 
-[Simple Package Manager](https://github.com/strangetheproot/practical-shell-files/blob/main/documentation/SimplePackageManagerHelp.md):
+[Package Manager](https://github.com/strangetheproot/practical-shell-files/blob/main/documentation/PackageManagerHelp.md):
 
 ``````
-cd; curl -LO https://raw.githubusercontent.com/strangetheproot/practical-shell-files/main/scripts/SimplePackageManager.sh && sudo bash SimplePackageManager.sh
+cd; curl -LO https://raw.githubusercontent.com/strangetheproot/practical-shell-files/main/scripts/PackageManager.sh && sudo bash PackageManager.sh
 ``````
 
 [Optional Stuff](https://github.com/strangetheproot/practical-shell-files/blob/main/documentation/OptionalStuffHelp.md):
