@@ -7,7 +7,7 @@ Select the number next to the program you want to grab. It'll install automatica
 #### [`Discord`](https://discord.com) A proprietary all-in-one voice and text chat.
 #### [`Spotify`](https://spotify.com) A proprietary music streaming service.
 #### [`LibreOffice`](https://www.libreoffice.org/) An open-source alternitive to Microsoft Office.
-#### [`Thorium`](https://thorium.rocks) A fork of Chromium that aims for speed and privacy.
+#### [`Thorium (not avalible until next version!)`](https://thorium.rocks) A fork of Chromium that aims for speed and privacy.
 #### [`Steam`](https://steampowered.com/) A proprietary game launcher.
 #### [`Retroarch`](https://www.retroarch.com/) An open source emulation app.
 #### [`Bluetooth`](https://en.wikipedia.org/wiki/Bluetooth) Curls a script from this repo that enables bluetooth on Arch Linux systems. You can see the documentation [here](https://github.com/strangetheproot/practical-shell-files/blob/main/documentation/BluetoothHelp.md).

@@ -95,8 +95,7 @@ while true; do
         ;;
     4)
         clear
-        echo "Compressing will take a while! Be patient." 
-        yay -S thorium-browser-bin --noconfirm
+        echo "Thorium doesn't work until the next version, segmentation fault." 
         ;;
     5)
         clear
