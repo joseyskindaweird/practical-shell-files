@@ -5,19 +5,19 @@ Copy and paste the command you need into the terminal, let it do its thing.
 [Package Manager](https://github.com/strangetheproot/practical-shell-files/blob/main/documentation/PackageManagerHelp.md):
 
 ``````
-cd; curl -LO https://raw.githubusercontent.com/strangetheproot/practical-shell-files/main/scripts/PackageManager.sh && sudo bash PackageManager.sh
+cd; curl -LO https://raw.githubusercontent.com/strangetheproot/practical-shell-files/main/scripts/PackageManager.sh && bash PackageManager.sh
 ``````
 
 [Optional Stuff](https://github.com/strangetheproot/practical-shell-files/blob/main/documentation/OptionalStuffHelp.md):
 
 ``````
-cd; curl -LO https://raw.githubusercontent.com/strangetheproot/practical-shell-files/main/scripts/OptionalStuff.sh && sudo bash OptionalStuff.sh
+cd; curl -LO https://raw.githubusercontent.com/strangetheproot/practical-shell-files/main/scripts/OptionalStuff.sh && bash OptionalStuff.sh
 ``````
 
 [Updater](https://github.com/strangetheproot/practical-shell-files/blob/main/documentation/UpdaterScriptHelp.md):
 
 ``````
-cd; curl -LO https://raw.githubusercontent.com/strangetheproot/practical-shell-files/main/scripts/Updater.sh && sudo bash Updater.sh
+cd; curl -LO https://raw.githubusercontent.com/strangetheproot/practical-shell-files/main/scripts/Updater.sh && bash Updater.sh
 ``````
 
 
