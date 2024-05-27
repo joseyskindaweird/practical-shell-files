@@ -24,9 +24,9 @@ cd; curl -LO https://raw.githubusercontent.com/strangetheproot/practical-shell-f
 ## Contact me!
 If you're still having issues, or have suggestions, feel free to contact me!
 
-Discord: strange_being
+Discord: joseythestrangeone
 
-Twitter/X: [@strangetheproot](https://twitter.com/strangetheproot)
+Twitter/X: [@astrangetrans](https://twitter.com/astrangetrans)
 
 eMail: smg72411@gmail.com
 
