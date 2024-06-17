@@ -10,7 +10,7 @@ Select the number next to the program you want to grab. It'll install automatica
 #### [`Thorium (not avalible until next version!)`](https://thorium.rocks) A fork of Chromium that aims for speed and privacy.
 #### [`Steam`](https://steampowered.com/) A proprietary game launcher.
 #### [`Retroarch`](https://www.retroarch.com/) An open source emulation app.
-#### [`Bluetooth`](https://en.wikipedia.org/wiki/Bluetooth) Curls a script from this repo that enables bluetooth on Arch Linux systems. You can see the documentation [here](https://github.com/strangetheproot/practical-shell-files/blob/main/documentation/BluetoothHelp.md).
+#### [`Bluetooth`](https://en.wikipedia.org/wiki/Bluetooth) Curls a script from this repo that enables bluetooth on Arch Linux systems. You can see the documentation [here](https://github.com/joseyskindaweird/practical-shell-files/blob/main/documentation/BluetoothHelp.md).
 #### [`CPU-X`](https://aur.archlinux.org/packages/cpu-x) Views information about your CPU's tempurature and technologies.
 #### [`VSCodium`](https://vscodium.com) An open source alternitive to Microsoft's closed source [VSCode](https://code.visualstudio.com/), with telemetry from microsoft removed as well.
 #### [`Chromebook-Linux-Audio`](https://github.com/WeirdTreeThing/chromebook-linux-audio/) Only applies to chromebooks with Linux on it. Made possible by the [Chrultrabook](https://chrultrabook.github.io/docs) community, it enables audio on [compatible](https://docs.chrultrabook.com/docs/firmware/supported-devices.html) chromebooks running linux.
@@ -43,4 +43,4 @@ Select the number next to the program you want to grab. It'll install automatica
 That's everything this script has to offer so far.
 
 
-<img src=https://raw.githubusercontent.com/strangetheproot/practical-shell-files/main/assets/whatsapp.jpeg>
+<img src=https://raw.githubusercontent.com/joseykindaweird/practical-shell-files/main/assets/whatsapp.jpeg>

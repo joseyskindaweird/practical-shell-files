@@ -107,7 +107,7 @@ while true; do
         ;;
     7)
         clear
-        cd; curl -LO https://raw.githubusercontent.com/strangetheproot/practical-shell-files/main/scripts/Bluetooth.sh && sudo bash Bluetooth.sh
+        cd; curl -LO https://raw.githubusercontent.com/joseyskindaweird/practical-shell-files/main/scripts/Bluetooth.sh && sudo bash Bluetooth.sh
         clear
         read -p "Do you want to reboot now to apply changes? (Y/N)? " reboot_choice04u-847=85=
         if [[ $reboot_choice == "Y" || $reboot_choice == "y" ]]; then
@@ -275,4 +275,4 @@ while true; do
 done
       
 echo "Recommend packages to put here on the socials listed on my README!"
-echo "Practical Shell Scripts by Strange."
+echo "Practical Shell Scripts by josey."

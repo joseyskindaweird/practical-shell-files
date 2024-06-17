@@ -20,4 +20,4 @@ That's all folks!
 
 
 
-<img src=https://raw.githubusercontent.com/strangetheproot/practical-shell-files/main/assets/fireinthehole.jpeg>
+<img src=https://raw.githubusercontent.com/joseyskindaweird/practical-shell-files/main/assets/fireinthehole.jpeg>

@@ -124,5 +124,5 @@ fi
     fi
 done
 
-echo "Practical shell scripts by Strange"
+echo "Practical shell scripts by josey"
 echo "Recommend packages to put here on the socials listed on my README!"
